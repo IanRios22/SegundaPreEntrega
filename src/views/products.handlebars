@@ -1,0 +1,25 @@
+<div class="container">
+    <h2 class="page_title">PRODUCTS</h2>
+    <div class="row productsContainer">
+        {{#each products}}
+        <div class="col-md-4 product">
+            <h3>{{title}}</h3>
+            <p>Price: ${{price}}</p>
+            <p>Category: {{category}}</p>
+            <button class="btn btn-primary product_AddCartButton">Agregar Al carrito</button>
+        </div>
+        {{/each}}
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            {{#if prevLink}}
+            <a href="{{prevLink}}" class="btn btn-secondary">Pagina Anterior</a>
+            {{/if}}
+        </div>
+        <div class="col-md-6 text-right">
+            {{#if nextLink}}
+            <a href="{{nextLink}}" class="btn btn-secondary">Siguiente Pagina</a>
+            {{/if}}
+        </div>
+    </div>
+</div>

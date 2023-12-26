@@ -1,0 +1,61 @@
+/* Custom Styles */
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.page_title {
+    color: #007bff;
+}
+
+.productsContainer {
+    margin-top: 20px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.product h3 {
+    color: #333;
+}
+
+.product p {
+    color: #555;
+}
+
+.product_AddCartButton {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.product_AddCartButton:hover {
+    background-color: #218838;
+}
+
+/* Pagination Styles */
+.row {
+    margin-top: 20px;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.text-right {
+    text-align: right;
+}

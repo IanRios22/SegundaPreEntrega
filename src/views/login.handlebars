@@ -1,0 +1,38 @@
+<div class="container">
+    {{#if user}}
+    <div class="mt-5">
+        <p>Actualmente has iniciado sesión como {{user.name}}. Necesitas cerrar sesión antes de ingresar con un usuario
+            diferente.</p>
+        <button id="logout" class="btn btn-danger">Logout</button>
+    </div>
+    {{else}}
+    <div class="mt-5">
+        <h2>Iniciar Sesión</h2>
+        <form id="logForm" class="form_container">
+            <div class="mb-3">
+                <label for="email" class="form-label">Ingrese su email</label>
+                <input type="email" class="form-control form_input" id="email" name="email"
+                    placeholder="Correo electrónico" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Ingrese su contraseña</label>
+                <input type="password" class="form-control form_input" id="password" name="password"
+                    placeholder="Contraseña" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Ingresar</button>
+        </form>
+        <hr>
+        <div class="mb-3">
+            <a href="/api/sessions/github">
+                <button class="btn btn-secondary form_input">Ingresar con cuenta GitHub</button>
+            </a>
+        </div>
+        <hr>
+        <p>Haz olvidado tu contraseña? <a href="/restartPassword">Reiniciar contraseña</a></p>
+        <p>¿No estás registrado? <a href="/register">Regístrate aquí</a></p>
+    </div>
+    {{/if}}
+</div>
+
+<script src="/js/login.js"></script>
+<script src="/js/logout.js"></script>

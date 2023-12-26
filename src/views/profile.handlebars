@@ -1,0 +1,18 @@
+<div class="container">
+    {{#if user}}
+    <div class="mt-5">
+        <h2>PERFIL</h2>
+        <p>Nombre: {{user.name}}</p>
+        <p>Edad: {{user.age}}</p>
+        <p>Email: {{user.email}}</p>
+        <button id="logout" class="btn btn-danger">Logout</button>
+    </div>
+    {{else}}
+    <div class="mt-5">
+        <p>Debes haber iniciado sesión para poder ver tu perfil</p>
+        <a href="/login" class="btn btn-primary">Iniciar Sesión</a>
+    </div>
+    {{/if}}
+</div>
+
+<script src="/js/logout.js"></script>

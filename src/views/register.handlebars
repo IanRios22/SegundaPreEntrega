@@ -1,0 +1,19 @@
+<div>
+    {{#if user}}
+    <p>Actualmente haz iniciado sesión como {{user.name}}, necesitas salir antes de registrar un usuario diferente</p>
+    <button id="logout">logout</button>
+    {{else}}
+    <h2>Formulario de Registro</h2>
+    <form id="registerForm" class="form_container">
+        <input class="form_input" name="first_name" type="text" placeholder="ingrese su nombre">
+        <input class="form_input" name="last_name" type="text" placeholder="ingrese su apellido">
+        <input class="form_input" name="email" type="text" placeholder="ingrese su email">
+        <input class="form_input" name="age" type="text" placeholder="ingrese su edad">
+        <input class="form_input" type="password" name="password" placeholder="ingrese su contraseña">
+        <input class="form_input" type="submit">
+    </form>
+    {{/if}}
+</div>
+
+<script src="/js/register.js"></script>
+<script src="/js/logout.js"></script>
