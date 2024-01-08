@@ -1,5 +1,7 @@
 import mongoose from "mongoose";
-const cartsCollection = 'carts'
+
+const cartsCollection = 'carts';
+
 const cartSchema = new mongoose.Schema({
     products: {
         type: [
@@ -14,7 +16,11 @@ const cartSchema = new mongoose.Schema({
                 }
             }
         ],
-        defaults: []
+        default: []
+    },
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'user'  // Asegúrate de que coincida con el nombre de tu modelo de usuario
     }
 });
 

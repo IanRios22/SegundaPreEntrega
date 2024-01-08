@@ -13,8 +13,12 @@ export const cartId = async (req, res) => {
 
 export const cartCreate = async (req, res) => {
     try {
-        let result = await cartsModel.create({ products: [] });
-        res.send({ status: 'cart created', payload: result })
+        // Obtiene el ID del usuario actual, asumiendo que está almacenado en req.user._id
+        const userId = req.user._id;
+
+        // Crea el carrito asociado al usuario
+        let result = await cartsModel.create({ products: [], user: userId });
+        res.send({ status: 'cart created', payload: result });
     } catch (error) {
         res.status(404).send({ status: 'error' + error });
     }
